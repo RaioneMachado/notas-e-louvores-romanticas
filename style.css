@@ -141,6 +141,8 @@ header::before {
 .header-content {
     text-align: center;
     margin-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .header-content h1 {
@@ -182,6 +184,64 @@ header::before {
     text-align: center;
 }
 
+/* Estilos para os corações animados */
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff3366"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    animation: float 6s linear infinite;
+}
+
+.heart:nth-child(2n) {
+    animation-delay: 1s;
+    width: 25px;
+    height: 25px;
+}
+
+.heart:nth-child(3n) {
+    animation-delay: 2s;
+    width: 35px;
+    height: 35px;
+}
+
+.heart:nth-child(4n) {
+    animation-delay: 0.5s;
+    width: 20px;
+    height: 20px;
+}
+
+.heart:nth-child(5n) {
+    animation-delay: 3s;
+    width: 28px;
+    height: 28px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.6;
+        left: 10%;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+        left: 90%;
+    }
+}
 /* Hero Section */
 .hero {
     background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
