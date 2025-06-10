@@ -43,23 +43,34 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-image">
-                <img src="imagens/capa.png" alt="Músicas Românticas - Partituras">
-            </div>
-            <div class="hero-text">
-                <h2>Presenteie com música no Dia dos Namorados</h2>
-                <ul class="features-list">
-                    <li><i class="fas fa-heart"></i> 30 músicas românticas </li>
-                    <li><i class="fas fa-music"></i> Partituras em PDF</li>
-                    <li><i class="fas fa-headphones"></i> Playbacks em MP3</li>
-                    <li><i class="fas fa-gift"></i> Bônus especial</li>
-                </ul>
-            </div>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-image">
+            <img src="imagens/capa.png" alt="Músicas Românticas - Partituras">
         </div>
-    </section>
+        <div class="hero-text">
+            <h2>Presenteie com música no Dia dos Namorados</h2>
+            <ul class="features-list">
+                <li><i class="fas fa-heart"></i> 30 músicas românticas </li>
+                <li><i class="fas fa-music"></i> Partituras em PDF</li>
+                <li><i class="fas fa-headphones"></i> Playbacks em MP3</li>
+                <li><i class="fas fa-gift"></i> Bônus especial</li>
+            </ul>
+        </div>
+        
+        <!-- Botão centralizado sem afetar o resto -->
+        <div style="display: flex; justify-content: center; width: 100%; margin-top: 25px;">
+            <a href="#song-list" class="btn-alternative">
+                <span>VER LISTA COMPLETA DE MÚSICAS</span>
+                <i class="fas fa-list-ol"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 
 <!-- Instruments Section -->
 <section id="instruments" class="instruments-section">
@@ -383,7 +394,7 @@
 
 
    <!-- Song List -->
-    <section class="song-list">
+    <section id="song-list" class="song-list">
         <div class="container">
             <h2>Repertório Romântico</h2>
             <p class="section-subtitle">30 músicas selecionadas para emocionar no Dia dos Namorados</p>
@@ -456,5 +467,10 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.me/5561983164894" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>
