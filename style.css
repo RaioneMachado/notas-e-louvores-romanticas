@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #8b0000; /* Vinho escuro */
+    --primary-color: #5ec916; /* Vinho escuro */
     --secondary-color: #a52a2a;
     --accent-color: #ff6b6b;
     --dark-bg: #1a1a1a;
@@ -304,9 +304,17 @@ header::before {
 /* Instruments Section */
 .instruments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .instruments-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
 }
 
 .instrument-card {
@@ -415,7 +423,6 @@ header::before {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
 }
-
 /* Featured Combo */
 .featured-combo {
     background: linear-gradient(to right, rgba(139, 0, 0, 0.1), rgba(26, 26, 26, 0.8), rgba(139, 0, 0, 0.1));
